@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+function clone_emoji_repository() {
+    cd ./public || exit
+    git clone https://github.com/iamcal/emoji-data.git
+}
+
 function get_docker_network() {
     echo 'press-review-network'
 }
@@ -859,12 +864,6 @@ function run_php_script() {
       fi
 
       script="${SCRIPT}"
-    fi
-
-    local memory=''
-    if [ -n "${PHP_MEMORY_LIMIT}" ];
-    then
-        memory="${PHP_MEMORY_LIMIT}"
     fi
 
     local namespace=

@@ -140,7 +140,7 @@ doctrine:
                         alias:      'Api'
                         is_bundle:  false
                         dir:        '%kernel.project_dir%/src/Twitter/Infrastructure/Api/Entity'
-                        prefix:     'App\Twitter\Infrastructure\Api\Entity'
+                        prefix:     App\Twitter\Infrastructure\Api\Entity
                         type:       annotation
                     Member:
                         alias:      'Member'

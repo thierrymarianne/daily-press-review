@@ -7,6 +7,9 @@ SHELL:=/bin/bash
 help:
 		@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
+clone-emoji-repository: ## Clone emoji repository
+		@/bin/bash -c 'source ./bin/functions.sh && clone_emoji_repository'
+
 create-network: ## Create Docker network
 		@/bin/bash -c 'source ./bin/functions.sh && create_network'
 
